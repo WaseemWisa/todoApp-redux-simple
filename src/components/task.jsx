@@ -14,7 +14,6 @@ function Task({items}) {
   
   return (
     <div className="item flex items-start flex-wrap gap-x-3 p-2 bg-[#fff] rounded-[4px] my-2 " 
-    style={styles}
     >
     <button className={`checkBtn w-[26px] h-[26px] rounded-[4px] bg-slate-400 Flex text-xl text-[#fff]`}
       onClick={() => {
