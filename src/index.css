@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btnModel {
+    @apply w-[120px]  h-[42px] rounded-[5px] capitalize font-medium
+  }
+  .model {
+    @apply flex flex-col z-[999] bg-[#dedede] w-[500px] max-w-full p-6 rounded-[4px]
+  }
+  .label {
+    @apply inline-block mb-3
+  }
+  .select {
+    @apply block w-full h-[40px] outline-none pl-2
+  }
+  .titleInput {
+    @apply block w-full  h-[40px] outline-none pl-2
+  }
+  .confirmBtn {
+    @apply bg-[#415a77]  text-[#fff]
+  }
+  .cancelBtn {
+    @apply bg-[#cccdde]  text-[#646681]
+  }
+  .itemIcon {
+    @apply bg-[#eee] p-2 rounded-[4px] cursor-pointer
+  }
+  .Flex {
+    @apply flex justify-center items-center
+  }
+
+}
