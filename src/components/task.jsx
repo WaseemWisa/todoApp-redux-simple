@@ -2,7 +2,6 @@ import { useDispatch} from 'react-redux';
 import { MdDelete , MdEdit , MdCheck} from 'react-icons/md';
 import { openModel  , openUpDateModel} from '../store/activeModelSlice';
 import { removeTask , upDateIndex , checkTask} from '../store/tasksSlice';
-import { animated, useSpring } from '@react-spring/web'
 
 function Task({items}) {
   const dispatch = useDispatch();
@@ -11,17 +10,10 @@ function Task({items}) {
     dispatch(openUpDateModel());
     dispatch(upDateIndex(id))
   }
-  const styles = useSpring({
-    from: {
-      opacity: .7,
-    },
-    to: {
-      opacity: 1,
-    },
-  })
+
   
   return (
-    <animated.div className="item flex items-start flex-wrap gap-x-3 p-2 bg-[#fff] rounded-[4px] my-2 " 
+    <div className="item flex items-start flex-wrap gap-x-3 p-2 bg-[#fff] rounded-[4px] my-2 " 
     style={styles}
     >
     <button className={`checkBtn w-[26px] h-[26px] rounded-[4px] bg-slate-400 Flex text-xl text-[#fff]`}
@@ -41,7 +33,7 @@ function Task({items}) {
         <MdEdit/>
       </span>
     </div>
-  </animated.div>
+  </div>
   )
 }
 
